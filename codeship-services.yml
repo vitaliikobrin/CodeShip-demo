@@ -1,0 +1,9 @@
+version: '2.2'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    cached: true
+    default_cache_branch: "staging"
