@@ -1,0 +1,3 @@
+- service: web
+  name: build_web_app
+  command: npm run build
