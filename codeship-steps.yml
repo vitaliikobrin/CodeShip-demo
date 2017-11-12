@@ -1,6 +1,6 @@
 - service: web
   name: build_web_app
-  command: npm run build
+  command: bash -c "npm install && node_modules/.bin/ng build --prod --aot"
 
 - service: awsdeployment
   name: staging_deploy_web
