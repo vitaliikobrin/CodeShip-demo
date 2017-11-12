@@ -3,3 +3,5 @@ node_modules
 .gitignore
 docker
 dist
+codeship.aes
+aws-deployment.env
