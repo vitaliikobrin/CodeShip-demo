@@ -1,3 +1,7 @@
 - service: web
   name: build_web_app
   command: npm run build
+
+- service: awsdeployment
+  name: staging_deploy_web
+  command: aws s3 sync /app/dist s3://codeship-demo-site
