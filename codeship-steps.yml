@@ -1,8 +1,3 @@
 - service: web
   name: build_web_app
   command: bash -c "npm install && node_modules/.bin/ng build --prod --aot"
-
-- service: aws_deployment
-  tag: master
-  name: staging_deploy_web
-  command: aws s3 sync /app/dist s3://codeship-demo-site
