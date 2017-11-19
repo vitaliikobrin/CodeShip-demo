@@ -6,3 +6,13 @@ services:
       context: .
       dockerfile: docker/Dockerfile
     command: npm run build
+    volumes:
+      - ./:/app
+
+  awsdeployment:
+    image: codeship/aws-deployment
+    encrypted_env_file: aws-deployment.env.encrypted
+    environment:
+      - AWS_DEFAULT_REGION=eu-central-1
+    volumes_from:
+      - web
